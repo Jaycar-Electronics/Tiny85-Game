@@ -31,12 +31,6 @@ you also need a programmer, which can be a spare arduino or the dedicated ISP [X
 | 7 | middle button |
 | 8 | OLED VCC and Battery +
 
-## Downloads
-* [Source code](../downloads/Tiny85.zip)
-
-## Software Libraries
-|Library | Author
-| --- |--- |
 
 ## Assembly
 The Experimenter’s Protoboard comes as two similar halves, so snap it in half. The important things to orient ourselves are the copper tracks and the row and column number, so don’t worry about the alignment of the other writing too much.
