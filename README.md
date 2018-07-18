@@ -41,13 +41,13 @@ you also need a programmer, which can be a spare arduino or the dedicated ISP [X
 ## Assembly
 The Experimenter’s Protoboard comes as two similar halves, so snap it in half. The important things to orient ourselves are the copper tracks and the row and column number, so don’t worry about the alignment of the other writing too much.
 
-![](../images/NPI00006a.png)
+![](images/NPI00006a.png)
 
 Note there is one copper trace that goes around three side of the board. Place the Tactile Button Switches on the board as shown above and solder in place. The trace labelled in orange above, that goes around three sides of the board will be connected to the positive battery terminal, and the trace labelled in black will go to the negative battery terminal.
 
 The next step is to solder the IC socket in place. If you would like to make a slimmer version of the game, you can eliminate the IC socket and header socket for the display, but this will make it much harder to debug and reprogram the game. The notch in the IC socket faces furthest away from the buttons, so that pin 1 is in row 9.
 
-![](../images/NPI00006b.png)
+![](images/NPI00006b.png)
 
 
 
@@ -55,29 +55,29 @@ Note how we’ve deliberately bridged pins 4 and 8 (remember we are looking at t
 
 To mount the OLED display, cut the HM3230 female header strip at the fifth position, so that you get a length of four pieces. This is soldered to the prototyping board using rows 8-11. The pin in row 10 is bridged to the right, and the pin in row 11 is bridged to the left.
 
-![](../images/NPI00006c.png)
+![](images/NPI00006c.png)
 
 Then set up four resistors as shown, ( _NB: excuse the red, not sure where these were originally pointing towards_ )
 
-![](../images/NPI00006d.png)
+![](images/NPI00006d.png)
 
 Take the top leg of the right hand resistor, and attach it to pin 5 of the IC socket- this will be the first pin directly in line.
 
-![](../images/NPI00006e.png)
+![](images/NPI00006e.png)
 
 The rest of the legs can be trimmed, but keep the offcuts to make some short links between the two top pins of the header socket and pins 2 and 3 of the IC socket.
 
 Mount the battery holder as shown, making sure the connections go to the positive and negative rails.
 
-![](../images/NPI00006f.png)
+![](images/NPI00006f.png)
 
-![](../images/NPI00006g.png)
+![](images/NPI00006g.png)
 
 The last bit of soldering is to run some short pieces of wire from pins 6 and 7 on the IC socket to the other two pushbuttons (the easiest point to solder to is the exposed leg of the resistor).
 
 You can test fit the ATTiny85 IC and OLED display to make sure it all looks OK- be careful with the pins of the IC, as they will bend very easily, especially when trying to remove the IC from the socket. A good trick is to install the IC into a second socket to protect the pins from repeated removal while you are programming and testing.
 
-![](../images/NPI00006h.png)
+![](images/NPI00006h.png)
 
 Do not insert the battery yet- we need to program the ATTiny85 IC, and if this is done in place, the programmer will put 5V on the battery, which might damage it.
 
@@ -99,7 +99,7 @@ Otherwise, you can make a very simple ISP (In System Programmer) using an Arduin
 To attach the programmer to the ATTiny85, gently push it down on top of the IC so that the corresponding pins are connected and hold it there while programming is occurring.
 
 By default, the Arduino IDE does not support the ATTiny85 IC. If you do not have this support installed, it can be added by following the instructions here:
-https://www.http://jaycar.com.au/medias/sys_master/images/9059963731998/ZZ8721-manualMain.pdf
+https://www.http://jaycar.com.au/medias/sys_mastimages/9059963731998/ZZ8721-manualMain.pdf
 
 If you are using a brand new ATTiny85, it will probably need to have a bootloader installed. In this case, there isn't any actual bootloader code as such, but there are some 'fuse' settings which set certain things like processor speed and clock source. For a new IC, use the Tools menu to select Board as ATTiny25/45/85, processor as ATTiny85 IC and clock as 8MHz internal clock.
 
