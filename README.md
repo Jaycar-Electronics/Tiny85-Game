@@ -92,8 +92,7 @@ Otherwise, you can make a very simple ISP (In System Programmer) using an Arduin
 
 To attach the programmer to the ATTiny85, gently push it down on top of the IC so that the corresponding pins are connected and hold it there while programming is occurring.
 
-By default, the Arduino IDE does not support the ATTiny85 IC. If you do not have this support installed, it can be added by following the instructions here:
-https://www.http://jaycar.com.au/medias/sys_mastimages/9059963731998/ZZ8721-manualMain.pdf
+By default, the Arduino IDE does not support the ATTiny85 IC. If you do not have this support installed, it can be added by following the instructions from the [ZZ8721 downloads page](https://www.jaycar.com.au/attiny85-ic-8-pin-dip8/p/ZZ8721#accessibletabscontent0-2)
 
 If you are using a brand new ATTiny85, it will probably need to have a bootloader installed. In this case, there isn't any actual bootloader code as such, but there are some 'fuse' settings which set certain things like processor speed and clock source. For a new IC, use the Tools menu to select Board as ATTiny25/45/85, processor as ATTiny85 IC and clock as 8MHz internal clock.
 
